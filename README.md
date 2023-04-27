@@ -19,7 +19,7 @@ Note: For Windows WSL see [this article](https://medium.com/@rhdzmota/python-dev
 - [python-dotenv](https://pypi.org/project/python-dotenv/)
 - [requests](https://pypi.org/project/requests/)
 
-Most of the OIDC functionality is provided by AuthLib. Reading their [documentation](https://docs.authlib.org/en/latest/) will be very helpful. 
+Note: Most of the OIDC functionality in this project is provided by AuthLib. 
 
 ## Getting Started
 
@@ -45,4 +45,4 @@ Connect provider.
 | OIDC_API_BASE_URL        | This is set to `http://localhost:3000` by default, but it **MUST** match the value defined for your client in your OIDC Provider settings. |
 | OIDC_CLIENT_KWARGS       | The defaults should work as is for most OIDC Providers. If not you will have to work through the issue with your provider.                 |
 
-
+Other configuration values may be needed depending on your OpenID Provider. See the AuthLib [documentation](https://docs.authlib.org/en/latest/) for help with other options.
