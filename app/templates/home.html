@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="content">
+{% if userinfo and id_token %}
+<p>Click &#39;logout&#39; to end your OIDC session</p>
+<h4>User Info:</h4>
+<pre>{{ userinfo }}</pre>
+<h4>ID Token:</h4>
+<pre>{{ id_token }}</pre>
+{% else %}
+<p>Click &#39;login&#39; to authenticate using OIDC</p>
+{% endif %}
+</div>
+{% endblock %}

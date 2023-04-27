@@ -1,0 +1,41 @@
+# Compiled output
+build
+
+# Dependencies
+node_modules
+
+# Byte-compiled / optimized / DLL files
+__pycache__
+*.py[cod]
+
+# IDEs and editors
+/.idea
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+
+# CDK asset staging directory
+.cdk.staging
+cdk.out
+
+# Misc
+npm-debug.log
+yarn-error.log
+.nvmrc
+.venv
+.env
+.env.*
+*.sqlite
+*.pyc
+
+# System Files
+.DS_Store
+Thumbs.db

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{% block title %} {% endblock %} - FlaskApp</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    .content {
+      padding: 0 10px 10px 10px;
+    }
+    pre {
+      border: 1px solid #ccc;
+      background-color: #f0f0f0;
+      padding: 15px;
+      line-height:1.2em;
+      font-family: "Consolas", "Lucida Console", Monaco, monospace;
+    }
+    nav {
+      padding: 5px;
+      background-color: navy;
+    }
+    nav a {
+      display: inline-block;
+      color: #fff;
+      text-decoration: none;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="/login">login</a>
+    <a href="/logout">logout</a>
+  </nav>
+  <div class="content">
+    {% block content %} {% endblock %}
+  </div>
+</body>
+</html>
