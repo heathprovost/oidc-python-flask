@@ -34,13 +34,13 @@
 <body>
   <nav>
     <a href="/">Home</a>
-    {% if current_user.is_authenticated %}
+    {% if session.is_authenticated %}
     <a href="/profile">Profile</a>
     {% endif %}
-    {% if not current_user.is_authenticated %}
+    {% if not session.is_authenticated %}
     <a href="/login">Login</a>
     {% endif %}
-    {% if current_user.is_authenticated %}
+    {% if session.is_authenticated %}
     <a href="/logout">Logout</a>
     {% endif %}
   </nav>

@@ -1,25 +1,25 @@
-import json
-from flask import redirect, url_for
-from flask_login import login_user, login_required, logout_user
+from flask import redirect, url_for, session
 from app.auth import auth
-from app.auth.user import User
 from app.extensions import oauth
+from app.util import is_authenticated
 
-@auth.route('/login', methods=['GET', 'POST'])
+@auth.route('/login')
 def login():
   redirect_uri = url_for('auth.callback', _external=True)
   return oauth.oidc.authorize_redirect(redirect_uri)
 
+
 @auth.route('/logout')
-@login_required
+@is_authenticated
 def logout():
-  logout_user()
+  session.pop('user')
+  session['is_authenticated'] = False
   return redirect(url_for('main.home'))
 
-@auth.route('/callback', methods=['GET', 'POST'])
+
+@auth.route('/callback')
 def callback():
   token = oauth.oidc.authorize_access_token()
-  print(json.dumps(token['userinfo'], sort_keys=True, indent=2))
-  print(json.dumps(oauth.oidc.userinfo(token=token), sort_keys=True, indent=2))
-  login_user(User(json.dumps(token['userinfo'], sort_keys=True, indent=2)))
+  session['is_authenticated'] = True
+  session['user'] = token['userinfo']
   return redirect(url_for('main.profile'))
