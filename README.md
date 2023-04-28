@@ -46,3 +46,7 @@ Connect provider.
 | OIDC_CLIENT_KWARGS       | The defaults should work as is for most OIDC Providers. If not you will have to work through the issue with your provider.                 |
 
 Other configuration values may be needed depending on your OpenID Provider. See the AuthLib [documentation](https://docs.authlib.org/en/latest/) for help with other options.
+
+## Development
+
+Once you have finished updating your configuration you can run your website locally by executing `flask run` in your terminal shell.

@@ -1,4 +1,4 @@
-Flask
-Authlib
-python-dotenv
-requests
+Authlib==1.2.0
+Flask==2.3.1
+python-dotenv==1.0.0
+requests==2.29.0
