@@ -2,14 +2,7 @@
 
 {% block content %}
 <div class="content">
-{% if userinfo and id_token %}
-<p>Click &#39;logout&#39; to end your OIDC session</p>
-<h4>User Info:</h4>
-<pre>{{ userinfo }}</pre>
-<h4>ID Token:</h4>
-<pre>{{ id_token }}</pre>
-{% else %}
-<p>Click &#39;login&#39; to authenticate using OIDC</p>
-{% endif %}
+  <h3>OpenID Connect Client implementation example using Python and Flask</h3>
+  <p>Click the login link to authenticate with your OIDC Provider</p>
 </div>
 {% endblock %}

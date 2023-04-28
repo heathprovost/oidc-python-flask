@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="content">
+  <h3>Welcome, {{ user_name }}</h3>
+  <p>This is a dump of your userinfo:</p>
+  <pre>{{ userinfo_json }}</pre>
+</div>
+{% endblock %}
