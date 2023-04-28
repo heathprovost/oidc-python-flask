@@ -3,9 +3,8 @@
 OpenID Connect Client implementation using Python and Flask
 
 This project is meant to provide a starting point for building a website using python and flask that is secured using OpenID Connect.
-Functionality is initially limited to a home page that displays **login** and **logout** links. The page will display the currently 
-authenticated user's [userinfo](https://connect2id.com/products/server/docs/api/userinfo) as well as the contents of their 
-[id_token](https://auth0.com/blog/id-token-access-token-what-is-the-difference/). 
+Functionality is initially limited to a home page that displays **login**, **logout**, and **profile** links. The profile page will 
+display the currently authenticated user's userinfo extracted from their [id_token](https://auth0.com/blog/id-token-access-token-what-is-the-difference/). 
 
 ## Requirements
 
@@ -38,8 +37,7 @@ If you are using a different editor or prefer to do things in a shell you can us
 ## Configuration
 
 All configuration for this project is done using a [.env](https://blog.bitsrc.io/a-gentle-introduction-to-env-files-9ad424cc5ff4) file. You can start by renaming
-the file `.example.env` to `.env` and then providing the missing values described below. The values that start with `OIDC_` must be acquired from your OpenID
-Connect provider.
+the file `.example.env` to `.env` and then providing the missing values described below. The values that start with `OIDC_` must be acquired from your OpenID Connect provider.
 
 | Variable                 | Description                                                                                                                                |
 |--------------------------|--------------------------------------------------------------------------------------------------------------------------------------------|
