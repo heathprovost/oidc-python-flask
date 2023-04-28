@@ -4,7 +4,8 @@ OpenID Connect Client implementation using Python and Flask
 
 This project is meant to provide a starting point for building a website using pythong and flask that is secured using OpenID Connect.
 Functionality is initially limited to a home page that displays **login** and **logout** links. The page will display the currently 
-authenticated user's userinfo as well as the contents of their id_token. 
+authenticated user's [userinfo](https://connect2id.com/products/server/docs/api/userinfo) as well as the contents of their 
+[id_token](https://auth0.com/blog/id-token-access-token-what-is-the-difference/). 
 
 ## Requirements
 
