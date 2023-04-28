@@ -9,14 +9,12 @@ def login():
   redirect_uri = url_for('auth.callback', _external=True)
   return oauth.oidc.authorize_redirect(redirect_uri)
 
-
 @auth.route('/logout')
 @is_authenticated
 def logout():
   session.pop('user')
   session['is_authenticated'] = False
   return redirect(url_for('main.home'))
-
 
 @auth.route('/callback')
 def callback():
