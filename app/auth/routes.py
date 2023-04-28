@@ -1,3 +1,4 @@
+import logging
 from flask import redirect, url_for, session
 from app.auth import auth
 from app.extensions import oauth
@@ -22,4 +23,5 @@ def callback():
   token = oauth.oidc.authorize_access_token()
   session['is_authenticated'] = True
   session['user'] = token['userinfo']
+  logging.debug(token)
   return redirect(url_for('main.profile'))

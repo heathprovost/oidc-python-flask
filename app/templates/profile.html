@@ -3,7 +3,7 @@
 {% block content %}
 <div class="content">
   <h3>Welcome, {{ session.user.name }}</h3>
-  <p>This is a dump of your userinfo:</p>
+  <p>This is a dump of your id_token:</p>
   <pre>{{ session.user|pprint }}</pre>
 </div>
 {% endblock %}

@@ -1,3 +1,4 @@
+import logging
 from flask import Flask
 from config import Config
 from app.extensions import oauth
@@ -5,6 +6,9 @@ from app.extensions import oauth
 def create_app(config_class=Config):
   app = Flask(__name__)
   app.config.from_object(config_class)
+
+  if app.debug:
+    logging.basicConfig(level=logging.DEBUG)
 
   oauth.init_app(app)
   oauth.register('oidc')
